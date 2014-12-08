@@ -22,7 +22,7 @@ Meteor.methods({
     var icon = ":slack:";
 
     // Slack channel to post to
-    var channel = "#general";
+    var channel = "organizers";
 
     // make actual webhook call
     try {
