@@ -17,6 +17,7 @@ Template.form.events({
     // gather fields
     var email = event.target.email.value;
     var name = event.target.name.value;
+    var who = event.target.who.value;
     //TODO if missing fields, warn them and don't submit
     // var error = '';
     //
@@ -29,7 +30,7 @@ Template.form.events({
     // }
 
     // call our server method by the same name, which will post to Slack
-    Meteor.call('sendRequestToSlack', name, email, function (error) {
+    Meteor.call('sendRequestToSlack', name, email, who, function (error) {
       if (error && error.error) {
         // oh we got back an error, lets store it for later alert popup
         Session.set('error', error.reason);

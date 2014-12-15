@@ -1,15 +1,26 @@
 Meteor.methods({
-  sendRequestToSlack: function(name, email) {
+  sendRequestToSlack: function(name, email, who) {
     // uses standard Slack HTTP post webhook
     // enter your custom webook url in settings.json
+
+    // prevent this method if they aren't logged in
+    if (!Meteor.user())
+      return "please log in first";
 
     // makes client request to this server method async
     // don't require client (browser/mobile) to wait on this method
     this.unblock();
 
     // the message we post into Slack
-    var message = name + " " + email + " would like Slack access. Admins, please invite them via " +
-                  Meteor.settings.public.slackUrl + "/admin/invites/full";
+    var message = name + " " + email;
+
+    // if they filled out the details field
+    if (who)
+      message = message + " (who: " + who + ")";
+
+    // give the admin some instructions
+    message = message + " would like Slack access. Admins, please invite them via " +
+        Meteor.settings.public.slackUrl + "/admin/invites/full";
 
     // the https webhook endpoint given to you by slack
     // it's a secret so keep in settings, which is not stored in git

@@ -2,12 +2,17 @@
   <form role="form" class="form-inline">
     <div class="form-group">
       <label for="email">Email</label>
-      <input type="email" class="form-control" id="email" placeholder="Enter email" {{formWaiting}}>
+      <input type="email" class="form-control" id="email" placeholder="Email address" {{formWaiting}}>
     </div>
     <div class="form-group">
       <label for="name">Name</label>
-      <input type="text" class="form-control" id="name" placeholder="Enter first and last name plz" {{formWaiting}}>
+      <input type="text" class="form-control" id="name" placeholder="First and last name plz" {{formWaiting}}>
     </div>
+    <div class="form-group">
+      <label for="name">Who are you?</label>
+      <input type="text" class="form-control" id="who" placeholder="Ruby dev from 757rb" {{formWaiting}}>
+    </div>
+
     <div class="form-group">
       <button type="submit" class="btn btn-primary" {{formWaiting}}>Submit</button>
     </div>
