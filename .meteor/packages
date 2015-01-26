@@ -10,6 +10,6 @@ accounts-github
 accounts-meetup
 accounts-google
 accounts-facebook
-mizzao:bootstrap-3
 http
 oauth-encryption
+fezvrasta:bootstrap-material-design
