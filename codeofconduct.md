@@ -1,3 +1,5 @@
+# 757dev Slack Team Code of Conduct
+
 All members of our Slack group are required to agree with the following code of conduct. Organizers will enforce this code throughout all channels. We are expecting cooperation from all participants to help ensuring a safe environment for everybody.
 
 tl;dr: Be excellent with each other
